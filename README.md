@@ -1,4 +1,4 @@
-# [Project Title]
+# [Adult-income-prediction-ML-pipeline
 > *One sentence. What did you analyze, build, or solve - and why does it matter?*
 
 ---
@@ -517,12 +517,12 @@ erDiagram
 
 ## 14. Author
 
-**[Your Name]**
-[Your role or title - current or target]
+**[Onyinye Stephanie Ozor]**
+[ AI & ML Specialist| Data Analyst ]
 
-- 🔗 [LinkedIn URL]
+- 🔗 [https://www.linkedin.com/in/onyinyeozor/]
 - 💼 [Portfolio or GitHub profile URL]
-- 📧 [Email - optional]
+- 📧 
 
 ---
 
