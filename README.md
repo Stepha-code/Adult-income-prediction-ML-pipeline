@@ -179,8 +179,7 @@ This analysis combines exploratory data analysis with supervised machine learnin
 
 
 ---
-
-## 9. Key Insights
+## 8. Key Insights
 
 <!--
 -->
@@ -196,11 +195,10 @@ The non-linear interactions between demographic variables—such as the compound
 
 ---
 
-## 10. Recommendations
+## 9. Recommendations
 
 <!--
  
-
 -->
 
 | Priority | Recommendation | Based On | Suggested Owner |
@@ -211,7 +209,7 @@ The non-linear interactions between demographic variables—such as the compound
 
 ---
 
-## 11. Assumptions & Limitations
+## 10. Assumptions & Limitations
 
 <!--
  
@@ -231,7 +229,7 @@ The non-linear interactions between demographic variables—such as the compound
 
 ---
 
-## 12. Future Enhancements
+## 11. Future Enhancements
 
 <!--
   
@@ -242,7 +240,7 @@ The non-linear interactions between demographic variables—such as the compound
 
 ---
 
-## 13. Deliverables
+## 12. Deliverables
 
 | Deliverable | Description | Location |
 |-------------|-------------|----------|
@@ -252,7 +250,7 @@ The non-linear interactions between demographic variables—such as the compound
 
 ---
 
-## 14. Author
+## 13. Author
 
 **[Onyinye Stephanie Ozor]**
 [ AI & ML Specialist| Data Analyst ]
