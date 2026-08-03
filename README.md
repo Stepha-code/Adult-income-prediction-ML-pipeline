@@ -1,6 +1,5 @@
 # [Adult-income-prediction-ML-pipeline
-> *One sentence. What did you analyze, build, or solve - and why does it matter?*
-
+> 
 ---
 
 ## ⚙️ Project Type Flags
