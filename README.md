@@ -34,7 +34,7 @@
 ## 1. Project Overview
 
 <!--
-
+-->
 **Context:** :In workforce analytics and socioeconomic research, understanding the key drivers of individual earning potential provides valuable insights for policy formulation, talent compensation benchmarking, and targeted economic support programs. The UCI Adult Income Dataset (derived from the 1994 US Census database) offers a rich benchmark of over 32,500 individual records spanning 14 demographic, educational, and employment attributes.
 
 **Problem Statement:** The goal of this project is to build an end-to-end binary classification machine learning pipeline to predict whether an employee earns >50K or <=50K per year based on individual demographic and employment attributes.
@@ -49,7 +49,7 @@ Data Cleaning & Preprocessing, Feature Encoding & Scaling, Model Benchmarking & 
 ## 2. Objectives
 
 <!--
-
+-->
 - **Primary Objective:** Develop, optimize, and evaluate a machine learning model that accurately predicts whether an individual earns more than $50K annually (>50K vs. <=50K)
 - **Secondary Objective 1:** Perform feature importance analysis on the trained models to determine which specific attributes like education level (education-num), capital gains, age, or weekly work hours—have the strongest influence on predicting high earners.
 - **Secondary Objective 2:** Design a standardized, end-to-end data preprocessing pipeline to allow for seamless deployment and inference on unseen data.
@@ -152,7 +152,7 @@ Hyperparameter-tuned the optimal ensemble model via GridSearchCV and performed f
 ## 7. Analysis & Metrics
 
 <!--
-
+-->
 ### Analytical Approach
 
 This analysis combines exploratory data analysis with supervised machine learning modeling. The approach began by exploring demographic and financial patterns within the Census Adult dataset to identify key correlations with income levels. Next, an end-to-end data preprocessing and feature engineering pipeline was built to handle missing values, cap extreme financial outliers, and scale numerical variables. Finally, five machine learning classification models were benchmarked and hyperparameter-tuned (GridSearchCV) to predict annual income brackets while mitigating class imbalance challenges.
