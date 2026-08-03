@@ -4,16 +4,14 @@
 ---
 
 ## ⚙️ Project Type Flags
-> *Check what applies. This helps reviewers and collaborators understand the nature of the work at a glance. Delete this block before publishing.*
+> 
 
+- [ ] Data Cleaning / Wrangling
 - [ ] Exploratory Data Analysis (EDA)
-- [ ] SQL Analysis / Querying
-- [ ] Dashboard / Data Visualization
+- [ ]  Data Visualization
 - [ ] Data Pipeline / ETL
 - [ ] Predictive Modelling / Machine Learning
-- [ ] Data Cleaning / Wrangling
-- [ ] End-to-End (multiple of the above)
-- [ ] Other: ___________
+
 
 ---
 
@@ -28,32 +26,15 @@
 8. [Key Insights](#8-key-insights)
 9. [Recommendations](#9-recommendations)
 10. [Assumptions & Limitations](#10-assumptions--limitations)
-11. [Future Enhancements](#12-future-enhancements)
-12. [Deliverables](#13-deliverables)
-13. [Author](#14-author)
+11. [Future Enhancements](#11-future-enhancements)
+12. [Deliverables](#12-deliverables)
+13. [Author](#13-author)
 
 ---
 
 ## 1. Project Overview
 
 <!--
-  Write 3–5 sentences in plain language.
-  Cover: context → problem → approach → outcome.
-  Read it out loud. If it sounds like a form - rewrite it.
-
-  WHAT GOOD LOOKS LIKE:
-  "A mid-size retail business was seeing inconsistent revenue across
-  its regional stores but couldn't identify the root cause. This project
-  explored 18 months of transaction data across five regions to determine
-  whether underperformance was driven by sales volume, pricing, or return
-  rates. The analysis revealed that one region's gap was almost entirely
-  explained by an unusually high return rate on a single product category -
-  a finding invisible in the company's top-level reporting."
-
-  WHAT TO AVOID:
-  "This project analyzes sales data to find trends and insights."
-  (Too vague. Could describe 10,000 projects. Describes none of them.)
--->
 
 **Context:** :In workforce analytics and socioeconomic research, understanding the key drivers of individual earning potential provides valuable insights for policy formulation, talent compensation benchmarking, and targeted economic support programs. The UCI Adult Income Dataset (derived from the 1994 US Census database) offers a rich benchmark of over 32,500 individual records spanning 14 demographic, educational, and employment attributes.
 
@@ -83,16 +64,7 @@ Data Cleaning & Preprocessing, Feature Encoding & Scaling, Model Benchmarking & 
 ### Scope
 
 <!--
-  WHAT GOOD LOOKS LIKE:
-  In Scope: "Transaction-level data for Regions A–E, Jan 2023–Jun 2024.
-             Analysis covers revenue, return rates, and product category performance."
-  Out of Scope: "Customer demographics and marketing spend data were excluded -
-                 demographic data was incomplete for two regions, and marketing
-                 data sits in a separate system outside this engagement."
 
-  WHAT TO AVOID:
-  ❌ Leaving Out of Scope blank. This is the section that protects your credibility.
-     If you don't define the fence, reviewers assume you missed things.
 -->
 
 | Dimension | Details |
@@ -104,8 +76,7 @@ Data Cleaning & Preprocessing, Feature Encoding & Scaling, Model Benchmarking & 
 ### Tools & Technologies
 
 <!--
-  List only what you actually used on this project.
-  This is not your skills section - it's the project's technical context.
+ 
 -->
 
 | Category | Tool(s) Used |
@@ -140,8 +111,6 @@ Data Cleaning & Preprocessing, Feature Encoding & Scaling, Model Benchmarking & 
 
 <!--
 
-
-  
 ```
 
 1. **Source:** tatic CSV dataset (adult.data / adult.csv) sourced from the UCI Machine Learning Repository via Kaggle, containing 32,561 rows and 15 raw attributes from the 1994 US Census database.
@@ -231,16 +200,7 @@ The non-linear interactions between demographic variables—such as the compound
 ## 10. Recommendations
 
 <!--
-  Action-oriented. Addressed to a real audience.
-  Tied explicitly to the insight that supports each one.
-
-  WHAT GOOD LOOKS LIKE:
-  Priority: High
-  Recommendation: "Conduct a fulfilment audit for home goods deliveries
-                   in Region A - specifically investigating whether returns
-                   correlate with a particular warehouse, carrier, or SKU batch."
-  Based On: Insight 1 - return rate anomaly in Region A
-  Owner: Operations / Supply Chain team
+ 
 
 -->
 
@@ -255,14 +215,7 @@ The non-linear interactions between demographic variables—such as the compound
 ## 11. Assumptions & Limitations
 
 <!--
-  WHAT GOOD LOOKS LIKE:
-  Assumption: "Transaction records were assumed to be complete for all five regions.
-               No validation was performed against source system record counts."
-  Limitation: "The analysis cannot distinguish between returns initiated by
-               the customer vs. returns initiated by the business (e.g., recalls).
-               If business-initiated returns are concentrated in Region A, the
-               return rate finding may reflect a policy decision, not a quality issue."
-
+ 
 -->
 
 ### Assumptions
@@ -282,12 +235,7 @@ The non-linear interactions between demographic variables—such as the compound
 ## 12. Future Enhancements
 
 <!--
-  WHAT GOOD LOOKS LIKE:
-  ✅ "Automate the monthly data pull from the POS export folder using
-      a scheduled Python script, replacing the current manual process."
-  ✅ "Expand the return rate analysis to include carrier-level data,
-      which was unavailable in this dataset but exists in the logistics system."
-
+  
 -->
 
 - [ ] Apply Synthetic Minority Over-sampling Technique (SMOTE) or adjust class-weight hyperparameter parameters during training to actively improve minority class recall (>50K high earners).
