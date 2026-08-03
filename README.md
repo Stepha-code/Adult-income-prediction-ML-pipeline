@@ -125,54 +125,21 @@ Data Cleaning & Preprocessing, Feature Encoding & Scaling, Model Benchmarking & 
 ```
 [project-root]/
 │
-├── data/
-│   ├── raw/                  # Original, unmodified source data - never edited
-│   ├── processed/            # Cleaned and transformed data
-│   └── external/             # Reference data, lookup tables, third-party files
-│
-├── notebooks/                # Jupyter, R Markdown, or Colab notebooks
-│
-├── scripts/                  # Reusable .py, .R, or .sh processing files
-│
-├── queries/                  # SQL files (retain this folder for SQL-heavy projects)
-│   ├── exploratory/          # Ad-hoc or investigative queries
-│   ├── transformations/      # Cleaning and reshaping logic
-│   └── final/                # Production-ready or presentation queries
-│
-├── reports/                  # Final outputs: PDFs, slide decks, Word docs
-│
-├── visuals/                  # Exported charts, dashboard screenshots, ERD diagrams
-│
-├── docs/                     # Data dictionaries, schema notes, reference material
-│
-├── project_metadata.yml      # Machine-readable metadata (optional)
-└── README.md                 # You are here
+├── LICENSE                              # Project license details (MIT)
+├── README.md                               # Project documentation and guide
+├── adult.data                               # Sourced training dataset
+├── adult.test                                # Sourced testing dataset
+├── employee_salary_prediction --.ipynb       # Main end-to-end ML notebook
+
 ```
 
-> ⚠️ *Delete folders you didn't use. An empty folder is worse than no folder.*
-> SQL-heavy projects: keep `queries/`. Analysis-only projects: keep `notebooks/`. Both? Keep both.
 
 ---
 
 ## 5. Data Workflow
 
 <!--
-  Show how data moved through your project - from source to output.
-  Every transformation decision should be traceable here.
 
-  WHAT GOOD LOOKS LIKE:
-  1. Source: "Monthly CSV exports pulled from the internal POS system.
-              Five files, one per region, covering Jan 2023–Jun 2024."
-  2. Ingestion: "Loaded into Python using pandas. Files concatenated into
-                 a single dataframe (approx. 340,000 rows)."
-  3. Cleaning: "Removed 1.2% of rows with null transaction IDs.
-                Standardised date formats across regional files.
-                Resolved product category naming inconsistencies (3 variants → 1)."
-  4. Transformation: "Created a returns_rate field at product-category level.
-                      Aggregated to weekly and regional grain for trend analysis."
-  5. Analysis: "Descriptive statistics, regional comparison, return rate
-                segmentation by product category."
-  6. Output: "Summary report (PDF), annotated notebook, processed CSV."
 
   
 ```
@@ -199,13 +166,6 @@ Hyperparameter-tuned the optimal ensemble model via GridSearchCV and performed f
 ## 6. Data Model & Schema
 
 <!--
-  Define your fields so that someone reading your analysis can follow along
-  without digging through your code.
-
-  WHAT GOOD LOOKS LIKE (one row example):
-  | transaction_id | string | Unique identifier per sales transaction | TXN-00482 |
-  | return_flag    | boolean | Whether the transaction included a return | TRUE |
-  | region_code    | string | Two-letter identifier for store region | "NE" |
 
 
 -->
@@ -255,16 +215,6 @@ This analysis combines exploratory data analysis with supervised machine learnin
 ## 9. Key Insights
 
 <!--
-  Findings + implications. Not just what happened - what it means.
-
-  WHAT GOOD LOOKS LIKE:
-  ✅ "Return rates, not sales volume, explain Region A's underperformance.
-      Region A's return rate on home goods was 34% - more than double the
-      company average. Revenue was not lost at the point of sale; it was
-      lost post-sale through refunds. This points to a fulfilment or
-      product quality issue specific to that region, not a demand problem."
-
-
 -->
 
 **Insight 1: Education years and capital gains are the primary drivers of high earning potential.**
@@ -296,9 +246,9 @@ The non-linear interactions between demographic variables—such as the compound
 
 | Priority | Recommendation | Based On | Suggested Owner |
 |----------|---------------|----------|-----------------|
-| High | [Specific, actionable step] | [Insight it comes from] | [Who should act] |
-| Medium | [Specific, actionable step] | [Insight it comes from] | [Who should act] |
-| Low | [Exploratory or longer-term suggestion] | [Insight it comes from] | [Who should act] |
+| High | Optimize Metric Selection & Class Thresholds | Insight 2 | ML Engineering / Data Science Team |
+| Medium | Prioritize High-Yield Educational & Asset Data Collection | Insight 1 | Data Strategy / Analytics Team |
+| Low | Implement Non-Linear & Ensemble Modeling | Insight 3: | R&D / Advanced Analytics Team |
 
 ---
 
@@ -313,24 +263,19 @@ The non-linear interactions between demographic variables—such as the compound
                If business-initiated returns are concentrated in Region A, the
                return rate finding may reflect a policy decision, not a quality issue."
 
-  WHAT TO AVOID:
-  ❌ Leaving this section blank or writing "None known."
-     Every project has limitations. Documenting them is a sign of
-     analytical maturity - not a confession of failure.
 -->
 
 ### Assumptions
-- [What did you treat as true without being able to verify?]
-- [What simplifications did you make for scope or feasibility?]
-- [What domain rules or definitions did you accept as given?]
+- Missing values denoted by "?" in categorical attributes (workclass, occupation, native-country) were assumed to occur at random (MCAR) and were imputed using column modes without introducing significant bias.
+- The $50K threshold was accepted as a static binary target representing economic status, assuming that nominal currency values across records reflect consistent buying power without adjusting for regional inflation or cost-of-living differences.
+
 
 ### Limitations
-- [What gaps exist in the data?]
-- [What analysis was out of scope but could affect interpretation?]
-- [What would a more rigorous version of this project include?]
-- [Are there known biases in the data source or collection method?]
+-  The dataset originates from the 1994 US Census extract; modern salary dynamics, remote work setups, inflation, and updated educational values are not reflected in these historical data points.
+- Key financial drivers such as total net worth, regional cost of living, household debt, and industry-specific certifications,were not captured in the raw dataset, limiting the predictive ceiling of demographic attributes alone.
 
-> *The goal here is pre-emptive Q&A. What would a thoughtful skeptic push back on? Document the answer here, before they ask.*
+
+> 
 
 ---
 
@@ -343,16 +288,10 @@ The non-linear interactions between demographic variables—such as the compound
   ✅ "Expand the return rate analysis to include carrier-level data,
       which was unavailable in this dataset but exists in the logistics system."
 
-  WHAT TO AVOID:
-  ❌ "Add a machine learning model."
-     (Vague, and disconnected from the actual findings of this project.)
-  ❌ Listing aspirational features that don't follow logically from the work.
 -->
 
-- [ ] [Enhancement 1 - specific and traceable to a real gap in this project]
-- [ ] [Enhancement 2]
-- [ ] [Enhancement 3]
-- [ ] [Enhancement 4]
+- [ ] Apply Synthetic Minority Over-sampling Technique (SMOTE) or adjust class-weight hyperparameter parameters during training to actively improve minority class recall (>50K high earners).
+- [ ] Benchmark modern gradient boosted decision trees (such as XGBoost, LightGBM, or CatBoost) against the Random Forest baseline to extract higher non-linear predictive power from continuous demographic variables.
 
 ---
 
@@ -360,9 +299,9 @@ The non-linear interactions between demographic variables—such as the compound
 
 | Deliverable | Description | Location |
 |-------------|-------------|----------|
-| [Name] | [What it contains] | [`/path/to/file`] |
-| [Name] | [What it contains] | [`/path/to/file`] |
-| [Name] | [What it contains] | [`/path/to/file`] |
+| Raw Dataset | Sourced 1994 US Census Adult dataset containing 32,561 rows and 15 raw feature attributes. |./adult.csv |
+| Project Documentation| Complete project guide detailing scope, methodology, data schema, metrics, key insights, and deployment instructions. | [`README.md`] |
+| Analysis Notebook | Annotated Vscode covering full EDA, preprocessing, model training, hyperparameter tuning, evaluation diagnostics, and inference testing| [`[/path/to/file](https://www.google.com/search?q=./employee_salary_prediction.ipynb)`] |
 
 ---
 
@@ -373,9 +312,9 @@ The non-linear interactions between demographic variables—such as the compound
 
 - 🔗 [https://www.linkedin.com/in/onyinyeozor/]
 - 💼 [Portfolio or GitHub profile URL]
-- 📧 
+
 
 ---
 
-*Last updated: [Month YYYY]*
-*If this template helped you, consider starring the repository.*
+*Last updated: [08 2026]*
+
