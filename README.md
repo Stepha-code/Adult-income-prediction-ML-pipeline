@@ -108,7 +108,7 @@ Data Cleaning & Preprocessing, Feature Encoding & Scaling, Model Benchmarking & 
 <!--
 
 ```
-
+-->
 1. **Source:** tatic CSV dataset (adult.data / adult.csv) sourced from the UCI Machine Learning Repository via Kaggle, containing 32,561 rows and 15 raw attributes from the 1994 US Census database.
 
 2. **Ingestion:** Loaded into Python using pandas.read_csv() with explicit custom column headers (COLUMN_NAMES), setting header=None, na_values=" ?", and skipinitialspace=True to handle non-standard formatting.
@@ -175,7 +175,7 @@ This analysis combines exploratory data analysis with supervised machine learnin
 
 
 ---
--->
+
 ## 8. Key Insights
 
 <!--
