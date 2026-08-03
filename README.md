@@ -228,21 +228,6 @@ Hyperparameter-tuned the optimal ensemble model via GridSearchCV and performed f
 ## 7. Analysis & Metrics
 
 <!--
-  Explain what you measured and how - before you share what you found.
-
-  WHAT GOOD LOOKS LIKE:
-  Metric: "Customer Return Rate"
-  Definition: "Number of transactions flagged as returns divided by total
-               transactions, calculated at product-category and regional grain."
-  Why It Matters: "Return rate - not sales volume - was hypothesised to
-                  explain regional revenue gaps. This metric tests that hypothesis."
-
-  WHAT TO AVOID:
-  ❌ Defining a metric only in code: SUM(returns) / COUNT(transaction_id)
-     That's an implementation. Write the plain-language definition here.
-     Both belong in your project - the definition in the README,
-     the implementation in the code.
--->
 
 ### Analytical Approach
 
@@ -279,25 +264,17 @@ This analysis combines exploratory data analysis with supervised machine learnin
       lost post-sale through refunds. This points to a fulfilment or
       product quality issue specific to that region, not a demand problem."
 
-  WHAT TO AVOID:
-  ❌ "Region A had lower revenue than other regions in Q4."
-     (That's an observation. It describes what happened.
-      An insight says what it means and where to look next.)
 
-  Aim for 3–6 insights. Quality over quantity.
 -->
 
-**Insight 1: [Short descriptive headline]**
-[What you found + what it suggests. One short paragraph.]
+**Insight 1: Education years and capital gains are the primary drivers of high earning potential.**
+Years of formal education and capital-gain far outweigh attributes like age or work sector in predicting income >50K. Individuals with higher educational attainment and existing investment assets show a exponentially higher likelihood of crossing the $50K threshold. This suggests that financial literacy programs and access to higher education remain the most effective leverage points for socioeconomic mobility.
 
-**Insight 2: [Short descriptive headline]**
-[What you found + what it suggests.]
+**Insight 2: Severe target class imbalance skews baseline model performance**
+Roughly 76% of individuals in the dataset earn <=50K, leaving only ~24% in the >50K high-earning bracket. Relying solely on raw classification accuracy leads to deceptive performance metrics, as a naive model predicting <=50K for every record would achieve 76% accuracy while failing completely on high earners
 
-**Insight 3: [Short descriptive headline]**
-[What you found + what it suggests.]
-
-**Insight 4 (if applicable): [Short descriptive headline]**
-[What you found + what it suggests.]
+**Insight 3 (if applicable): Earning Dynamics Depend on Compounding Demographic Factors**
+The non-linear interactions between demographic variables—such as the compounding effect of high hours-per-week combined with specific occupation sectors—were far better captured by decision trees, highlighting that financial earning models require non-linear decision boundaries to capture real-world workforce dynamics.
 
 ---
 
@@ -315,11 +292,6 @@ This analysis combines exploratory data analysis with supervised machine learnin
   Based On: Insight 1 - return rate anomaly in Region A
   Owner: Operations / Supply Chain team
 
-  WHAT TO AVOID:
-  ❌ "Improve the return rate."
-     (Not actionable. Doesn't say who, how, or where to start.)
-  ❌ "Further analysis is needed."
-     (This is a placeholder, not a recommendation.)
 -->
 
 | Priority | Recommendation | Based On | Suggested Owner |
