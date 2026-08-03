@@ -44,7 +44,7 @@ Data Cleaning & Preprocessing, Feature Encoding & Scaling, Model Benchmarking & 
 
 **Outcome:** Feature importance analysis revealed that education-num (years of education), capital-gain, age, and hours-per-week are the primary drivers predicting high earnings ($>50\text{K}$)
 
----
+--->
 
 ## 2. Objectives
 
@@ -57,7 +57,7 @@ Data Cleaning & Preprocessing, Feature Encoding & Scaling, Model Benchmarking & 
 
 
 ---
-
+-->
 ## 3. Project Scope & Tools
 
 ### Scope
@@ -130,11 +130,10 @@ Hyperparameter-tuned the optimal ensemble model via GridSearchCV and performed f
 6. **Output:** Production-ready inference pipeline test verifying predictions on new sample dat
 
 ---
-
+-->
 ## 6. Data Model & Schema
 
 <!--
-
 
 -->
 
@@ -146,7 +145,7 @@ Hyperparameter-tuned the optimal ensemble model via GridSearchCV and performed f
 | `workclass`| string   | Type of employer / employment sector | Private |
 | `fnlwgt`   |integer  | Final weight; sample weight assigned by Census Bureau | 77516 |
 
-> **Row count (approx.):** [32561]
+ **Row count (approx.):** 32561
 
 
 ---
@@ -179,6 +178,7 @@ This analysis combines exploratory data analysis with supervised machine learnin
 
 
 ---
+-->
 ## 8. Key Insights
 
 <!--
