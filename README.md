@@ -44,7 +44,7 @@ Data Cleaning & Preprocessing, Feature Encoding & Scaling, Model Benchmarking & 
 
 **Outcome:** Feature importance analysis revealed that education-num (years of education), capital-gain, age, and hours-per-week are the primary drivers predicting high earnings ($>50\text{K}$)
 
---->
+
 
 ## 2. Objectives
 
@@ -54,7 +54,7 @@ Data Cleaning & Preprocessing, Feature Encoding & Scaling, Model Benchmarking & 
 - **Secondary Objective 1:** Perform feature importance analysis on the trained models to determine which specific attributes like education level (education-num), capital gains, age, or weekly work hours—have the strongest influence on predicting high earners.
 - **Secondary Objective 2:** Design a standardized, end-to-end data preprocessing pipeline to allow for seamless deployment and inference on unseen data.
 
--->
+
 ## 3. Project Scope & Tools
 
 ### Scope
@@ -106,8 +106,6 @@ Data Cleaning & Preprocessing, Feature Encoding & Scaling, Model Benchmarking & 
 ## 5. Data Workflow
 
 <!--
-
-```
 -->
 1. **Source:** tatic CSV dataset (adult.data / adult.csv) sourced from the UCI Machine Learning Repository via Kaggle, containing 32,561 rows and 15 raw attributes from the 1994 US Census database.
 
