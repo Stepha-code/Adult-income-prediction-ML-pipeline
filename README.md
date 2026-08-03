@@ -246,24 +246,24 @@ Hyperparameter-tuned the optimal ensemble model via GridSearchCV and performed f
 
 ### Analytical Approach
 
-[Describe how you approached the analysis. Were you exploring patterns? Testing a hypothesis? Building and validating a pipeline? Be honest about your method - exploratory work is valid, just call it that.]
+This analysis combines exploratory data analysis with supervised machine learning modeling. The approach began by exploring demographic and financial patterns within the Census Adult dataset to identify key correlations with income levels. Next, an end-to-end data preprocessing and feature engineering pipeline was built to handle missing values, cap extreme financial outliers, and scale numerical variables. Finally, five machine learning classification models were benchmarked and hyperparameter-tuned (GridSearchCV) to predict annual income brackets while mitigating class imbalance challenges.
 
 ### Key Metrics Defined
 
 | Metric | Plain-Language Definition | Why It Matters |
 |--------|--------------------------|----------------|
-| `[Metric 1]` | [What it measures, in one sentence] | [What decision or question it answers] |
-| `[Metric 2]` | [What it measures, in one sentence] | [What decision or question it answers] |
-| `[Metric 3]` | [What it measures, in one sentence] | [What decision or question it answers] |
+| `Classification Accuracy` | The percentage of total income predictions that the model got completely correct. | Provides an overall baseline measure of model correctness across the dataset.|
+| `Precision (High-Income Class)` | Out of all individuals the model predicted as earning >50K, the proportion who actually earn >50K | Prevents false positives—ensuring economic interventions or target programs are not misallocated to ineligible individuals|
+| `Recall / Sensitivity` | the percentage that the model successfully caught. | Measures model completeness |
 
 ### Methods Used
 
-- [e.g., Descriptive statistics - distribution, central tendency, outlier detection]
-- [e.g., Trend analysis across [time period]]
-- [e.g., Segmentation / group comparison by [dimension]]
-- [e.g., Correlation analysis between [variable A] and [variable B]]
-- [e.g., SQL window functions for [specific aggregation]]
-- [e.g., Custom aggregation or transformation logic in [tool]]
+- Descriptive Statistics: Summary statistics (mean, median, standard deviation, IQR) for distribution analysis and continuous outlier detection across financial fields.
+- Exploratory Visualizations: Univariate distributions (sns.histplot), categorical breakdown charts (sns.countplot), box plots for outlier visualization, and correlation heatmaps across continuous numerical attributes.
+- Segmentation & Group Comparison: Categorical cross-tabulation and aggregation analyzing income distribution by education level (education-num), employment sector (workclass), and gender (sex)
+- Feature Importance Analysis: Extracted Gini importance metrics (model.feature_importances_) from the optimal Random Forest model to rank top predictive socioeconomic drivers.
+- Hyperparameter Optimization: Systematic cross-validated grid search (GridSearchCV) across model hyperparameter spaces (n_estimators, max_depth, min_samples_split).
+
 
 ---
 
